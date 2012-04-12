@@ -28,7 +28,7 @@
             }
             NSString* frString = [NSString stringWithFormat:@"%d. %@ - %@pts", idx+1, [[friend objectForKey:@"friendData"] objectForKey:@"name"], friendResult];
             [strings addObject:frString];
-            *stop = (idx>10); //Should be smarter
+            *stop = (idx>=9); //Should be smarter
         }];
         result = [NSArray arrayWithArray:strings];
         
