@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FunNoFunModel.h"
+@interface ViewController : UIViewController <FunNoFunModelDelegate>
+@property (weak, nonatomic) FunNoFunModel* model;
+@property IBOutlet UIImageView* firstFriendImage;
+@property IBOutlet UIImageView* secondFriendImage;
+@property IBOutlet UILabel * firstFriendLabel;
+@property IBOutlet UILabel *secondFriendLabel;
+@property IBOutlet UIProgressView* progress;
+@property IBOutlet UILabel* progressLabel;
 
-@interface ViewController : UIViewController
+
+-(IBAction)firstFriendTouched:(id)sender;
+-(IBAction)secondFriendTouched:(id)sender;
 
 @end

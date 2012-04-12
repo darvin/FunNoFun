@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+#import "Facebook.h"
+#import "FunNoFunModel.h"
+#import "ViewController.h"
+@interface AppDelegate : UIResponder <UIApplicationDelegate, FBSessionDelegate> {
+}
+@property (strong, nonatomic) Facebook * facebook;
 @property (strong, nonatomic) UIWindow *window;
+@property (strong) FunNoFunModel* model;
+
+@property (strong, nonatomic) ViewController *viewController;
 
 @end
